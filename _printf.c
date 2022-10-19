@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * _printf - Receives the main string and all the necessary parameters to
- * print a formated string
- * @format: A string containing all the desired characters
- * Return: A total count of the characters printed
-*/
-
+ * _printf - produces output according to a format
+ * @format: format string containing the characters and the specifiers
+ * Description: this function will call the get_print() function that will
+ * determine which printing function to call depending on the conversion
+ * specifiers contained into fmt
+ * Return: length of the formatted output string
+ */
 int _printf(const char *format, ...)
 {
 	int (*pfunc)(va_list, flags_t *);
